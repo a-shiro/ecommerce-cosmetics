@@ -1,0 +1,36 @@
+.header {
+  border-bottom: 1px solid lightgray;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 5.5rem;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.navDropdown {
+  padding: 0 1rem;
+  font-family: Lato, sans-serif;
+}
+
+.navList {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.navList > li {
+  cursor: pointer;
+}
