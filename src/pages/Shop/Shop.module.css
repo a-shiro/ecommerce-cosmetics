@@ -1,0 +1,60 @@
+.banner {
+  padding: 5rem 2rem;
+  background-image: url("../../assets/images/shop-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+.banner > h1 {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.productList {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+}
+
+.card > img {
+  width: 100%;
+}
+
+.cardDetails {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardDetails > h4 {
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.asideFilters {
+  padding: 2rem 0;
+}
+
+.asideFilters > p {
+  margin-bottom: 1rem;
+  font-family: Lato, serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.categoriesList > li {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
