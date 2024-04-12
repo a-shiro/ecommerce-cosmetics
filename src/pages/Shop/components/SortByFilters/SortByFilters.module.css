@@ -1,0 +1,59 @@
+.container {
+  position: relative;
+}
+
+.active {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  cursor: pointer;
+}
+
+.active > span {
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+.active > :last-child {
+  margin: 0.1rem 0 0 1rem;
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  border-top: none;
+  background-color: white;
+  animation: drop-in 0.25s forwards ease-out;
+}
+
+.sortTypeList {
+  font-size: 1.15rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: gray;
+}
+
+.sortTypeList > li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.sortTypeList > li:hover {
+  background-color: rgb(243, 243, 243);
+  color: rgb(50, 50, 50);
+}
+
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    top: 2rem;
+  }
+  100% {
+    opacity: 1;
+    top: 3rem;
+  }
+}
