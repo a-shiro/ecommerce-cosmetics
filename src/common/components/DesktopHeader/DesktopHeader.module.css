@@ -1,0 +1,70 @@
+.header {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .header {
+    display: block;
+  }
+
+  .header {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .leftContainer {
+    width: 10rem;
+  }
+
+  .middleContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .middleContainer > ul {
+    display: flex;
+    font-family: Lato, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .middleContainer > ul > li {
+    margin: 0 1rem;
+  }
+
+  .logoContainer {
+    margin: 0 3.5rem;
+  }
+
+  .logoContainer img {
+    width: 6.5rem;
+  }
+
+  .rightContainer > ul {
+    display: flex;
+  }
+
+  .rightContainer > ul > li {
+    padding: 1.25rem;
+    cursor: pointer;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .cartDropdown {
+    width: 20rem;
+    padding: 3rem;
+    position: absolute;
+    top: 4.65rem;
+    right: 0;
+    font-size: 1.15rem;
+    background-color: black;
+    color: lightgray;
+    cursor: initial;
+  }
+}
