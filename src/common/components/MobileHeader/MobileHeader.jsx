@@ -5,7 +5,7 @@ import { useState } from "react";
 // CSS
 import styles from "./MobileHeader.module.css";
 // Assets
-import logo from "../../../assets/images/logo-mobile.png";
+import Logo from "../../../assets/svgs/MobileLogo.jsx";
 import { ReactComponent as HamburgerIcon } from "../../../assets/svgs/hamburger-icon.svg";
 
 function MobileHeader() {
@@ -18,7 +18,9 @@ function MobileHeader() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <img className={styles.logo} src={logo} alt="logo" />
+        <Link to="/">
+          <Logo />
+        </Link>
 
         <div onClick={toggleNav} className={styles.hamburger}>
           <HamburgerIcon />
@@ -29,13 +31,19 @@ function MobileHeader() {
         <nav className={styles.navDropdown}>
           <ul className={styles.navList}>
             <li>
-              <Link to="/">Home</Link>
+              <Link onClick={toggleNav} to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link onClick={toggleNav} to="/shop">
+                Shop
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link onClick={toggleNav} to="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>

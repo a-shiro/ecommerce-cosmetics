@@ -5,9 +5,9 @@ import { useState } from "react";
 // CSS
 import styles from "./DesktopHeader.module.css";
 // Assets
-import logo from "../../../assets/images/logo-mobile.png";
 import { ReactComponent as HamburgerIcon } from "../../../assets/svgs/hamburger-icon.svg";
 import { ReactComponent as CartIcon } from "../../../assets/svgs/cart-icon.svg";
+import Logo from "../../../assets/svgs/DesktopLogo.jsx";
 
 function DesktopHeader() {
   const [cartDropdownVisible, setCartDropdownVisible] = useState(false);
@@ -29,7 +29,7 @@ function DesktopHeader() {
 
         <div className={styles.logoContainer}>
           <Link to="/">
-            <img src={logo} alt="" />
+            <Logo />
           </Link>
         </div>
 
