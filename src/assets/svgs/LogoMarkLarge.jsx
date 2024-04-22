@@ -22,7 +22,7 @@ function DesktopLogo() {
             color="#000"
           ></path>
           <g
-            ariaLabel="B"
+            aria-label="B"
             style={{ lineHeight: "1.25", InkscapeFontSpecification: "KARMEN" }}
             fontFamily="KARMEN"
             fontSize="347.747"
@@ -36,7 +36,7 @@ function DesktopLogo() {
             ></path>
           </g>
           <g
-            ariaLabel="A"
+            aria-label="A"
             style={{ lineHeight: "1.25", InkscapeFontSpecification: "KARMEN" }}
             fontFamily="KARMEN"
             fontSize="347.747"
