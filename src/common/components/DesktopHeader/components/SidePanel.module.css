@@ -1,0 +1,85 @@
+.sidePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: black;
+  color: white;
+
+  cursor: initial;
+}
+
+.closeBtn {
+  color: white;
+  background-color: transparent;
+  border: none;
+
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+
+  cursor: pointer;
+
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  -o-transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.closeBtn:hover {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panelContent {
+  width: 32.5rem;
+  height: 100vh;
+
+  text-align: center;
+}
+
+.panelContent p {
+  width: 35ch;
+  margin: auto;
+
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  font-style: italic;
+
+  color: lightgray;
+}
+
+.socialsList {
+  margin-top: 3rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.socialsList > li {
+  padding: 0.65rem 0.65rem 0.35rem 0.65rem;
+  border: 1px solid gray;
+
+  -webkit-transition: border-color 200ms ease-out;
+  -o-transition: border-color 200ms ease-out;
+  transition: border-color 200ms ease-out;
+}
+
+.socialsList > li:hover {
+  border-color: white;
+
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (min-width: 1536px) {
+  .panelContent {
+    margin-top: 3.5rem;
+  }
+}
