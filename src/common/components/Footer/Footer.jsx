@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 // CSS
 import styles from "./Footer.module.css";
 // Assets
-import logo from "../../../assets/images/logo-white.png";
+import Logo from "../../../assets/svgs/LogoFooter";
 import { ReactComponent as InstagramIcon } from "../../../assets/svgs/instagram-icon.svg";
+import { ReactComponent as FacebookIcon } from "../../../assets/svgs/facebook-icon.svg";
 
 function Footer() {
   return (
@@ -12,17 +13,26 @@ function Footer() {
       <div className={styles.mainContent}>
         <div className={styles.contacts}>
           <h4>Contact</h4>
-          <p>Address: Example 42, Bulgaria</p>
-          <p>E-mail: example@gmail.com</p>
-          <p>Phone: 000 999 999</p>
+
+          <div>
+            <p>
+              Address: <span>Example 42, Bulgaria</span>
+            </p>
+            <p>
+              E-mail: <span>example@gmail.com</span>
+            </p>
+            <p>
+              Phone: <span>000 999 999</span>
+            </p>
+          </div>
         </div>
 
         <div className={styles.brand}>
-          <img src={logo} alt="" />
+          <Logo />
 
           <p>
-            An oasis of online beauty built specifically so your new cosmetics
-            site can take everyone’s breaths away.
+            Pulchritudo est mirabilis facultas invenire admirationem et
+            inspirationem in rebus simplicissimis quae nos circumdant.
           </p>
 
           <ul className={styles.socialsList}>
@@ -30,28 +40,25 @@ function Footer() {
               <InstagramIcon />
             </li>
             <li>
-              <InstagramIcon />
-            </li>
-            <li>
-              <InstagramIcon />
-            </li>
-            <li>
-              <InstagramIcon />
+              <FacebookIcon />
             </li>
           </ul>
         </div>
 
         <div className={styles.links}>
           <h4>Links</h4>
-          <p>
-            <Link>Privacy policy</Link>
-          </p>
-          <p>
-            <Link>Terms and condions</Link>
-          </p>
-          <p>
-            <Link>Contact</Link>
-          </p>
+
+          <ul>
+            <li>
+              <Link>Privacy policy</Link>
+            </li>
+            <li>
+              <Link>Terms and condions</Link>
+            </li>
+            <li>
+              <Link>Contact</Link>
+            </li>
+          </ul>
         </div>
       </div>
 

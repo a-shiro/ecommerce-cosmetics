@@ -1,39 +1,99 @@
 .footer {
+  text-align: center;
+
   background-color: black;
   color: white;
-  text-align: center;
 }
 
 .mainContent {
-  padding: 5rem 2rem;
+  max-width: 39rem;
+  margin: auto;
+  padding: 5rem 1rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .brand {
   margin: 5rem 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.brand > img {
-  width: 12.5rem;
-}
-
 .brand > p {
-  margin: 2rem 0 1rem 0;
+  max-width: 35ch;
+  margin: 1rem 0 2rem 0;
+
+  font-size: 1.35rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+
+  color: #c1c1c1;
 }
 
 .brand > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
+
+.socialsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contacts p,
+.links > ul > li {
+  margin-bottom: 0.25rem;
+}
+
+.contacts p > span:hover,
+.links > ul > li > a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.socialsList > li {
+  padding: 0.65rem 0.65rem 0.35rem 0.65rem;
+  border: 1px solid gray;
+
+  -webkit-transition: border-color 200ms ease-out;
+  -o-transition: border-color 200ms ease-out;
+  transition: border-color 200ms ease-out;
+}
+
+.socialsList > li:hover {
+  border-color: white;
+
+  cursor: pointer;
 }
 
 .contacts > h4,
 .links > h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+
   font-family: Lato, sans-serif;
   font-size: 1.15rem;
   text-transform: uppercase;
@@ -41,17 +101,62 @@
   letter-spacing: 2px;
 }
 
-.contacts > p,
-.brand > p,
+.contacts p,
 .links a,
 .copyright > p {
-  color: #c1c1c1;
   font-size: 1.25rem;
   font-style: italic;
   letter-spacing: 0.5px;
+
+  color: #c1c1c1;
 }
 
 .copyright {
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-top: 1px solid #c1c1c1;
+}
+
+/* Media queries */
+@media (min-width: 1024px) {
+  .mainContent {
+    max-width: 65rem;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .mainContent > div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .brand {
+    margin: 2.5rem 0;
+  }
+
+  .contacts {
+    text-align: start;
+  }
+
+  .links {
+    text-align: end;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mainContent {
+    max-width: 75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .mainContent {
+    max-width: 85rem;
+  }
 }
