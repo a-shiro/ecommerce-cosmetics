@@ -4,14 +4,20 @@
 
 @media (min-width: 1025px) {
   .header {
-    display: block;
-  }
-
-  .header {
     padding: 0 2rem;
+    border-bottom: 1px solid lightgray;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+
+    position: relative;
   }
 
   .leftContainer {
@@ -19,12 +25,19 @@
   }
 
   .middleContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .middleContainer > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
     font-family: Lato, sans-serif;
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -35,32 +48,84 @@
     margin: 0 1.5rem;
   }
 
+  .middleContainer > ul a {
+    padding: 0.15rem 0;
+
+    display: inline-block;
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: gray;
+
+    -webkit-transition: color 200ms ease-in-out;
+    -o-transition: color 200ms ease-in-out;
+    transition: color 200ms ease-in-out;
+  }
+
+  .middleContainer > ul a::after {
+    content: "";
+
+    width: 0;
+    border-bottom: 1.5px solid #000;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    -webkit-transition: width 200ms ease-in-out;
+    -o-transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out;
+  }
+
+  .middleContainer > ul a:hover {
+    color: #000;
+  }
+
+  .middleContainer > ul a:hover::after {
+    width: 100%;
+  }
+
   .logoContainer {
     margin: 0 2rem;
   }
 
   .rightContainer > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .rightContainer > ul > li {
-    padding: 1.5rem 1.25rem;
     cursor: pointer;
   }
 
   .cart {
+    padding: 1rem;
     position: relative;
+  }
+
+  .hamburger {
+    padding: 0rem 1rem;
   }
 
   .cartDropdown {
     width: 20rem;
     padding: 3rem;
+
     position: absolute;
-    top: 5.2rem;
+    top: 5.12rem;
     right: 0;
+
     font-size: 1.15rem;
+
     background-color: black;
     color: lightgray;
+
     cursor: initial;
   }
 }

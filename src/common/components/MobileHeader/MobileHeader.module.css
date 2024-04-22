@@ -13,9 +13,14 @@
   position: relative;
   z-index: 100;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   background-color: white;
@@ -28,6 +33,7 @@
 .navDropdown {
   width: 100%;
   padding: 0 1rem;
+  border-bottom: 1px solid lightgray;
 
   position: absolute;
   z-index: 1;
@@ -35,48 +41,73 @@
   font-family: Lato, sans-serif;
 
   background-color: white;
-  animation: drop 0.5s forwards ease-out;
 }
 
 .navList {
-  padding: 1rem;
+  max-width: 37rem;
+  margin: auto;
+  padding: 1rem 1rem 2rem 1rem;
 
+  display: -ms-grid;
   display: grid;
   gap: 1.5rem;
 
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 0.85rem;
+  font-weight: 400;
   text-transform: uppercase;
-
-  opacity: 0;
-  animation: fade 0.5s 0.45s forwards ease-out;
 }
 
 .navList > li {
   cursor: pointer;
 }
 
-@keyframes drop {
-  0% {
-    top: -5rem;
-  }
-  100% {
-    top: 4.3rem;
-  }
+.navList a {
+  padding: 0.15rem 0;
+
+  display: inline-block;
+
+  position: relative;
+
+  text-decoration: none;
+
+  color: gray;
+
+  -webkit-transition: color 200ms ease-in-out;
+  -o-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.navList a::after {
+  content: "";
+
+  width: 0;
+  border-bottom: 1.5px solid #000;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  -webkit-transition: width 200ms ease-in-out;
+  -o-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
 }
 
+.navList a:hover {
+  color: #000;
+}
+
+.navList a:hover::after {
+  width: 100%;
+}
+
+/* Media queries */
 @media (min-width: 640px) {
   .container {
     max-width: 59rem;
+  }
+
+  .navDropdown > ul {
+    max-width: 57rem;
   }
 }
 
