@@ -1,19 +1,25 @@
 // Components
 import { Link } from "react-router-dom";
+import HamburgerButton from "../HamburgerButton/HamburgerButton.jsx";
+import SidePanel from "./components/SidePanel.jsx";
 // Hooks
 import { useState } from "react";
 // CSS
-import styles from "./DesktopHeader.module.css";
+import styles from "./DesktopHeaderBar.module.css";
 // Assets
-import { ReactComponent as HamburgerIcon } from "../../../assets/svgs/hamburger-icon.svg";
 import { ReactComponent as CartIcon } from "../../../assets/svgs/cart-icon.svg";
-import Logo from "../../../assets/svgs/DesktopLogo.jsx";
+import Logo from "../../../assets/svgs/LogoMarkLarge.jsx";
 
-function DesktopHeader() {
+function DesktopHeaderBar() {
   const [cartDropdownVisible, setCartDropdownVisible] = useState(false);
+  const [sidePanelVisible, setSidePanelVisible] = useState(false);
 
   const toggleCartDropdown = () => {
     setCartDropdownVisible(!cartDropdownVisible);
+  };
+
+  const toggleSideMenu = () => {
+    setSidePanelVisible(!sidePanelVisible);
   };
 
   return (
@@ -60,8 +66,11 @@ function DesktopHeader() {
               </div>
             )}
           </li>
-          <li>
-            <HamburgerIcon />
+
+          <li className={styles.hamburger}>
+            <HamburgerButton toggleMenu={toggleSideMenu} />
+
+            {sidePanelVisible && <SidePanel toggleMenu={toggleSideMenu} />}
           </li>
         </ul>
       </div>
@@ -69,4 +78,4 @@ function DesktopHeader() {
   );
 }
 
-export default DesktopHeader;
+export default DesktopHeaderBar;

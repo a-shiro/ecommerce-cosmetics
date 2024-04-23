@@ -129,9 +129,3 @@
     cursor: initial;
   }
 }
-
-@media (min-width: 1280px) {
-  .header {
-    padding: 0 4rem;
-  }
-}
