@@ -4,7 +4,7 @@ import HamburgerButton from "../HamburgerButton/HamburgerButton.jsx";
 // Hooks
 import { useState } from "react";
 // CSS
-import styles from "./MobileHeader.module.css";
+import styles from "./MobileHeaderBar.module.css";
 // Assets
 import Logo from "../../../assets/svgs/LogoMarkSmall.jsx";
 
