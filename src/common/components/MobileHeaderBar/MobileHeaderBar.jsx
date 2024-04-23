@@ -1,14 +1,14 @@
 // Components
 import { Link } from "react-router-dom";
+import HamburgerButton from "../HamburgerButton/HamburgerButton.jsx";
 // Hooks
 import { useState } from "react";
 // CSS
 import styles from "./MobileHeader.module.css";
 // Assets
-import Logo from "../../../assets/svgs/MobileLogo.jsx";
-import { ReactComponent as HamburgerIcon } from "../../../assets/svgs/hamburger-icon.svg";
+import Logo from "../../../assets/svgs/LogoMarkSmall.jsx";
 
-function MobileHeader() {
+function MobileHeaderBar() {
   const [navActive, setNavActive] = useState(false);
 
   const toggleNav = () => {
@@ -17,31 +17,33 @@ function MobileHeader() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
+      <div className="md">
         <Link to="/">
           <Logo />
         </Link>
 
-        <div onClick={toggleNav} className={styles.hamburger}>
-          <HamburgerIcon />
-        </div>
+        <HamburgerButton toggleMenu={toggleNav} />
       </div>
 
       {navActive && (
-        <nav className={styles.navDropdown}>
-          <ul className={styles.navList}>
+        <nav className={styles.dropdownNav}>
+          <ul className={`${styles.navMenu} md`}>
             <li>
-              <Link onClick={toggleNav} to="/">
+              <Link className={styles.menuLink} onClick={toggleNav} to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} to="/shop">
+              <Link className={styles.menuLink} onClick={toggleNav} to="/shop">
                 Shop
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} to="/contact">
+              <Link
+                className={styles.menuLink}
+                onClick={toggleNav}
+                to="/contact"
+              >
                 Contact
               </Link>
             </li>
@@ -52,4 +54,4 @@ function MobileHeader() {
   );
 }
 
-export default MobileHeader;
+export default MobileHeaderBar;
